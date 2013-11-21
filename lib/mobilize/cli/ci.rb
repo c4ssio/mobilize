@@ -12,8 +12,9 @@ module Mobilize
         if _operator and 
           Ci.respond_to?     _operator
           Ci.send            _operator
+        else
+          Cli.except Ci
         end
-        Cli.except Ci
       end
       #takes the given prefix, decodes it, decrypts it, writes it to
       #the home folder with <prefix>_<env>.ssh
