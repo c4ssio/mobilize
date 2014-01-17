@@ -120,7 +120,7 @@ module Mobilize
         @box.sh           '\curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3'
       end
 
-      def install_gem_remote( _path = "mobilize/mobilize" )
+      def install_gem_remote( _path = "c4ssio/mobilize" )
         @box.sh                         "rm -rf mobilize && " +
                                         "git clone http://u:p@github.com/#{ _path }.git --depth=1"
         _repo_revision                = @box.sh "cd mobilize && git log -1 --pretty=format:%H"
